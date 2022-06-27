@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.ListBox = new System.Windows.Forms.ListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.RadioButtonsCB = new System.Windows.Forms.CheckBox();
+            this.CheckBoxesCB = new System.Windows.Forms.CheckBox();
+            this.ListBoxesCB = new System.Windows.Forms.CheckBox();
+            this.RadioButtonsRB = new System.Windows.Forms.RadioButton();
+            this.CheckBoxesRB = new System.Windows.Forms.RadioButton();
+            this.ListBoxesRB = new System.Windows.Forms.RadioButton();
             this.ListBoxGB = new System.Windows.Forms.GroupBox();
             this.CheckBoxGB = new System.Windows.Forms.GroupBox();
             this.RadioButtonGB = new System.Windows.Forms.GroupBox();
@@ -56,71 +56,77 @@
             this.ListBox.TabIndex = 0;
             this.ListBox.SelectedValueChanged += new System.EventHandler(this.ListBox_SelectedValueChanged);
             // 
-            // checkBox1
+            // RadioButtonsCB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(6, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Radio Buttons";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.RadioButtonsCB.AutoSize = true;
+            this.RadioButtonsCB.Checked = true;
+            this.RadioButtonsCB.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.RadioButtonsCB.Location = new System.Drawing.Point(6, 19);
+            this.RadioButtonsCB.Name = "RadioButtonsCB";
+            this.RadioButtonsCB.Size = new System.Drawing.Size(93, 17);
+            this.RadioButtonsCB.TabIndex = 1;
+            this.RadioButtonsCB.Text = "Radio Buttons";
+            this.RadioButtonsCB.UseVisualStyleBackColor = true;
+            this.RadioButtonsCB.CheckedChanged += new System.EventHandler(this.RadioButtonSelected);
             // 
-            // checkBox2
+            // CheckBoxesCB
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 43);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(89, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "Check Boxes";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CheckBoxesCB.AutoSize = true;
+            this.CheckBoxesCB.Location = new System.Drawing.Point(6, 43);
+            this.CheckBoxesCB.Name = "CheckBoxesCB";
+            this.CheckBoxesCB.Size = new System.Drawing.Size(89, 17);
+            this.CheckBoxesCB.TabIndex = 2;
+            this.CheckBoxesCB.Text = "Check Boxes";
+            this.CheckBoxesCB.UseVisualStyleBackColor = true;
+            this.CheckBoxesCB.CheckedChanged += new System.EventHandler(this.CheckBoxSelected);
             // 
-            // checkBox3
+            // ListBoxesCB
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 67);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(74, 17);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "List Boxes";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.ListBoxesCB.AutoSize = true;
+            this.ListBoxesCB.Location = new System.Drawing.Point(6, 67);
+            this.ListBoxesCB.Name = "ListBoxesCB";
+            this.ListBoxesCB.Size = new System.Drawing.Size(74, 17);
+            this.ListBoxesCB.TabIndex = 3;
+            this.ListBoxesCB.Text = "List Boxes";
+            this.ListBoxesCB.UseVisualStyleBackColor = true;
+            this.ListBoxesCB.CheckedChanged += new System.EventHandler(this.ListBoxSelected);
             // 
-            // radioButton1
+            // RadioButtonsRB
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Radio Buttons";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadioButtonsRB.AutoSize = true;
+            this.RadioButtonsRB.Checked = true;
+            this.RadioButtonsRB.Location = new System.Drawing.Point(6, 19);
+            this.RadioButtonsRB.Name = "RadioButtonsRB";
+            this.RadioButtonsRB.Size = new System.Drawing.Size(92, 17);
+            this.RadioButtonsRB.TabIndex = 4;
+            this.RadioButtonsRB.TabStop = true;
+            this.RadioButtonsRB.Text = "Radio Buttons";
+            this.RadioButtonsRB.UseVisualStyleBackColor = true;
+            this.RadioButtonsRB.CheckedChanged += new System.EventHandler(this.RadioButtonSelected);
             // 
-            // radioButton2
+            // CheckBoxesRB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 42);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 17);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Check Boxes";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.CheckBoxesRB.AutoSize = true;
+            this.CheckBoxesRB.Location = new System.Drawing.Point(6, 42);
+            this.CheckBoxesRB.Name = "CheckBoxesRB";
+            this.CheckBoxesRB.Size = new System.Drawing.Size(88, 17);
+            this.CheckBoxesRB.TabIndex = 5;
+            this.CheckBoxesRB.TabStop = true;
+            this.CheckBoxesRB.Text = "Check Boxes";
+            this.CheckBoxesRB.UseVisualStyleBackColor = true;
+            this.CheckBoxesRB.CheckedChanged += new System.EventHandler(this.CheckBoxSelected);
             // 
-            // radioButton3
+            // ListBoxesRB
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 66);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(73, 17);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "List Boxes";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.ListBoxesRB.AutoSize = true;
+            this.ListBoxesRB.Location = new System.Drawing.Point(6, 66);
+            this.ListBoxesRB.Name = "ListBoxesRB";
+            this.ListBoxesRB.Size = new System.Drawing.Size(73, 17);
+            this.ListBoxesRB.TabIndex = 6;
+            this.ListBoxesRB.TabStop = true;
+            this.ListBoxesRB.Text = "List Boxes";
+            this.ListBoxesRB.UseVisualStyleBackColor = true;
+            this.ListBoxesRB.CheckedChanged += new System.EventHandler(this.ListBoxSelected);
             // 
             // ListBoxGB
             // 
@@ -130,23 +136,25 @@
             this.ListBoxGB.Size = new System.Drawing.Size(109, 100);
             this.ListBoxGB.TabIndex = 7;
             this.ListBoxGB.TabStop = false;
+            this.ListBoxGB.Visible = false;
             // 
             // CheckBoxGB
             // 
-            this.CheckBoxGB.Controls.Add(this.checkBox1);
-            this.CheckBoxGB.Controls.Add(this.checkBox2);
-            this.CheckBoxGB.Controls.Add(this.checkBox3);
+            this.CheckBoxGB.Controls.Add(this.RadioButtonsCB);
+            this.CheckBoxGB.Controls.Add(this.CheckBoxesCB);
+            this.CheckBoxGB.Controls.Add(this.ListBoxesCB);
             this.CheckBoxGB.Location = new System.Drawing.Point(12, 118);
             this.CheckBoxGB.Name = "CheckBoxGB";
             this.CheckBoxGB.Size = new System.Drawing.Size(109, 100);
             this.CheckBoxGB.TabIndex = 8;
             this.CheckBoxGB.TabStop = false;
+            this.CheckBoxGB.Visible = false;
             // 
             // RadioButtonGB
             // 
-            this.RadioButtonGB.Controls.Add(this.radioButton1);
-            this.RadioButtonGB.Controls.Add(this.radioButton2);
-            this.RadioButtonGB.Controls.Add(this.radioButton3);
+            this.RadioButtonGB.Controls.Add(this.RadioButtonsRB);
+            this.RadioButtonGB.Controls.Add(this.CheckBoxesRB);
+            this.RadioButtonGB.Controls.Add(this.ListBoxesRB);
             this.RadioButtonGB.Location = new System.Drawing.Point(12, 12);
             this.RadioButtonGB.Name = "RadioButtonGB";
             this.RadioButtonGB.Size = new System.Drawing.Size(109, 100);
@@ -157,7 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 474);
+            this.ClientSize = new System.Drawing.Size(437, 389);
             this.Controls.Add(this.RadioButtonGB);
             this.Controls.Add(this.CheckBoxGB);
             this.Controls.Add(this.ListBoxGB);
@@ -175,12 +183,12 @@
         #endregion
 
         private System.Windows.Forms.ListBox ListBox;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.CheckBox RadioButtonsCB;
+        private System.Windows.Forms.CheckBox CheckBoxesCB;
+        private System.Windows.Forms.CheckBox ListBoxesCB;
+        private System.Windows.Forms.RadioButton RadioButtonsRB;
+        private System.Windows.Forms.RadioButton CheckBoxesRB;
+        private System.Windows.Forms.RadioButton ListBoxesRB;
         private System.Windows.Forms.GroupBox ListBoxGB;
         private System.Windows.Forms.GroupBox CheckBoxGB;
         private System.Windows.Forms.GroupBox RadioButtonGB;
