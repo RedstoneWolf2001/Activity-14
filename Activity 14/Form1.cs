@@ -18,55 +18,68 @@ namespace Activity_14
             InitializeComponent();
         }
 
-        public string selected = "RadioButton";
+        public string selected = "";    //Global variable for selected item
         
-        private void ListBox_SelectedValueChanged(object sender, EventArgs e)
+        private void ListBox_SelectedValueChanged(object sender, EventArgs e) //For the ListBox 
         {
             if (ListBox.Text == "Radio Buttons")
-                RadioButtonSelected((ListBox)sender, (EventArgs)e);
+                RadioButtonSelected((ListBox)sender, e);
             else if (ListBox.Text == "Check Boxes")
-                CheckBoxSelected((ListBox)sender, (EventArgs)e);
+                CheckBoxSelected((ListBox)sender, e);
             else if (ListBox.Text == "List Boxes")
-                ListBoxSelected((ListBox)sender, (EventArgs)e);
+                ListBoxSelected((ListBox)sender, e);
         }
-        private void RadioButtonSelected(object sender, EventArgs e)
+
+        private void RadioButtonSelected(object sender, EventArgs e) //For the section of Radio Buttons
         {
-            if (selected != "RadioButton")
+            if (selected != "Radio Buttons")
             {
                 RadioButtonGB.Visible = true;
                 RadioButtonsRB.Checked = true;
                 RadioButtonsCB.Checked = true;
                 ListBox.SelectedIndex = 0;
-                selected = "RadioButton";
-                Console.WriteLine(selected);
+                selected = RadioButtonsRB.Text;
+                RemoveTB.Text = selected + " is currently selected.";
             }
-            
+            RadioButtonGB.Visible = RadioButtonsCB.Checked;
+            CheckBoxGB.Visible = CheckBoxesCB.Checked;
+            ListBoxGB.Visible = ListBoxesCB.Checked;
         }
 
-        private void CheckBoxSelected(object sender, EventArgs e)
+        private void CheckBoxSelected(object sender, EventArgs e) //For the section of Check Boxes
         {
-            if (selected != "CheckBox")
+            if (selected != "Check Boxes")
             {
                 CheckBoxGB.Visible = true;
                 CheckBoxesRB.Checked = true;
                 CheckBoxesCB.Checked = true;
                 ListBox.SelectedIndex = 1;
-                selected = "CheckBox";
-                Console.WriteLine(selected);
+                selected = CheckBoxesCB.Text;
+                RemoveTB.Text = selected + " is currently selected.";
             }
+
+            RadioButtonGB.Visible = RadioButtonsCB.Checked;
+            CheckBoxGB.Visible = CheckBoxesCB.Checked;
+            ListBoxGB.Visible = ListBoxesCB.Checked;
+
+            if ((!RadioButtonsCB.Checked && !CheckBoxesCB.Checked && !ListBoxesCB.Checked)) // Secret for closing the program (apart from the close button)
+                Close();
         }
 
-        private void ListBoxSelected(object sender, EventArgs e)
+        private void ListBoxSelected(object sender, EventArgs e) //For the section of List Box Items
         {
-            if (selected != "ListBox")
+            if (selected != "List Boxes")
             {
                 ListBoxGB.Visible = true;
                 ListBoxesRB.Checked = true;
                 ListBoxesCB.Checked = true;
                 ListBox.SelectedIndex = 2;
-                selected = "ListBox";
-                Console.WriteLine(selected);
+                selected = ListBox.Text;
+                RemoveTB.Text = selected + " is currently selected.";
             }
+            RadioButtonGB.Visible = RadioButtonsCB.Checked;
+            CheckBoxGB.Visible = CheckBoxesCB.Checked;
+            ListBoxGB.Visible = ListBoxesCB.Checked;
         }
     }
 }

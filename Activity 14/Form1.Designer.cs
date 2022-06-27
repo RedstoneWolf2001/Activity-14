@@ -38,6 +38,7 @@
             this.ListBoxGB = new System.Windows.Forms.GroupBox();
             this.CheckBoxGB = new System.Windows.Forms.GroupBox();
             this.RadioButtonGB = new System.Windows.Forms.GroupBox();
+            this.RemoveTB = new System.Windows.Forms.TextBox();
             this.ListBoxGB.SuspendLayout();
             this.CheckBoxGB.SuspendLayout();
             this.RadioButtonGB.SuspendLayout();
@@ -59,8 +60,6 @@
             // RadioButtonsCB
             // 
             this.RadioButtonsCB.AutoSize = true;
-            this.RadioButtonsCB.Checked = true;
-            this.RadioButtonsCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RadioButtonsCB.Location = new System.Drawing.Point(6, 19);
             this.RadioButtonsCB.Name = "RadioButtonsCB";
             this.RadioButtonsCB.Size = new System.Drawing.Size(93, 17);
@@ -72,6 +71,8 @@
             // CheckBoxesCB
             // 
             this.CheckBoxesCB.AutoSize = true;
+            this.CheckBoxesCB.Checked = true;
+            this.CheckBoxesCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckBoxesCB.Location = new System.Drawing.Point(6, 43);
             this.CheckBoxesCB.Name = "CheckBoxesCB";
             this.CheckBoxesCB.Size = new System.Drawing.Size(89, 17);
@@ -94,12 +95,10 @@
             // RadioButtonsRB
             // 
             this.RadioButtonsRB.AutoSize = true;
-            this.RadioButtonsRB.Checked = true;
             this.RadioButtonsRB.Location = new System.Drawing.Point(6, 19);
             this.RadioButtonsRB.Name = "RadioButtonsRB";
             this.RadioButtonsRB.Size = new System.Drawing.Size(92, 17);
             this.RadioButtonsRB.TabIndex = 4;
-            this.RadioButtonsRB.TabStop = true;
             this.RadioButtonsRB.Text = "Radio Buttons";
             this.RadioButtonsRB.UseVisualStyleBackColor = true;
             this.RadioButtonsRB.CheckedChanged += new System.EventHandler(this.RadioButtonSelected);
@@ -107,6 +106,7 @@
             // CheckBoxesRB
             // 
             this.CheckBoxesRB.AutoSize = true;
+            this.CheckBoxesRB.Checked = true;
             this.CheckBoxesRB.Location = new System.Drawing.Point(6, 42);
             this.CheckBoxesRB.Name = "CheckBoxesRB";
             this.CheckBoxesRB.Size = new System.Drawing.Size(88, 17);
@@ -123,7 +123,6 @@
             this.ListBoxesRB.Name = "ListBoxesRB";
             this.ListBoxesRB.Size = new System.Drawing.Size(73, 17);
             this.ListBoxesRB.TabIndex = 6;
-            this.ListBoxesRB.TabStop = true;
             this.ListBoxesRB.Text = "List Boxes";
             this.ListBoxesRB.UseVisualStyleBackColor = true;
             this.ListBoxesRB.CheckedChanged += new System.EventHandler(this.ListBoxSelected);
@@ -131,7 +130,7 @@
             // ListBoxGB
             // 
             this.ListBoxGB.Controls.Add(this.ListBox);
-            this.ListBoxGB.Location = new System.Drawing.Point(12, 224);
+            this.ListBoxGB.Location = new System.Drawing.Point(242, 12);
             this.ListBoxGB.Name = "ListBoxGB";
             this.ListBoxGB.Size = new System.Drawing.Size(109, 100);
             this.ListBoxGB.TabIndex = 7;
@@ -143,12 +142,11 @@
             this.CheckBoxGB.Controls.Add(this.RadioButtonsCB);
             this.CheckBoxGB.Controls.Add(this.CheckBoxesCB);
             this.CheckBoxGB.Controls.Add(this.ListBoxesCB);
-            this.CheckBoxGB.Location = new System.Drawing.Point(12, 118);
+            this.CheckBoxGB.Location = new System.Drawing.Point(127, 12);
             this.CheckBoxGB.Name = "CheckBoxGB";
             this.CheckBoxGB.Size = new System.Drawing.Size(109, 100);
             this.CheckBoxGB.TabIndex = 8;
             this.CheckBoxGB.TabStop = false;
-            this.CheckBoxGB.Visible = false;
             // 
             // RadioButtonGB
             // 
@@ -160,12 +158,24 @@
             this.RadioButtonGB.Size = new System.Drawing.Size(109, 100);
             this.RadioButtonGB.TabIndex = 9;
             this.RadioButtonGB.TabStop = false;
+            this.RadioButtonGB.Visible = false;
+            // 
+            // RemoveTB
+            // 
+            this.RemoveTB.Location = new System.Drawing.Point(12, 119);
+            this.RemoveTB.Name = "RemoveTB";
+            this.RemoveTB.ReadOnly = true;
+            this.RemoveTB.Size = new System.Drawing.Size(339, 20);
+            this.RemoveTB.TabIndex = 10;
+            this.RemoveTB.Text = "Try to remove all 3!";
+            this.RemoveTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 389);
+            this.ClientSize = new System.Drawing.Size(365, 151);
+            this.Controls.Add(this.RemoveTB);
             this.Controls.Add(this.RadioButtonGB);
             this.Controls.Add(this.CheckBoxGB);
             this.Controls.Add(this.ListBoxGB);
@@ -177,6 +187,7 @@
             this.RadioButtonGB.ResumeLayout(false);
             this.RadioButtonGB.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -192,6 +203,7 @@
         private System.Windows.Forms.GroupBox ListBoxGB;
         private System.Windows.Forms.GroupBox CheckBoxGB;
         private System.Windows.Forms.GroupBox RadioButtonGB;
+        private System.Windows.Forms.TextBox RemoveTB;
     }
 }
 
